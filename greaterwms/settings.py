@@ -114,9 +114,9 @@ DATABASES = {
      'default': {
          # 配置使用mysql
          'ENGINE': 'django.db.backends.mysql',     # 数据库产品
-         'HOST': "radondb-v0osep-radondb-mys",           # 数据库ip
+         'HOST': "mysql",           # 数据库ip
          'PORT': 3306,                  # 数据库端口
-         'USER': "kasumi",                # 用户名
+         'USER': "root",                # 用户名
          'PASSWORD': "Kasumi@2022",           # 密码
          'NAME': "kasumi",         # 数据库名
      }

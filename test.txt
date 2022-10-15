@@ -1,0 +1,48 @@
+Operations to perform:
+   Apply all migrations: admin, asn, auth, binproperty, binset, binsize, capital, chat, company, contenttypes, customer, cyclecount, dn, driver, goods, goodsbrand, goodsclass, goodscolor, goodsorigin, goodsshape, goodsspecs, goodsunit, payment, scanner, sessions, shopid, silk, staff, stock, supplier, throttle, userprofile, warehouse
+ Running migrations:
+ Traceback (most recent call last):
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 82, in _execute
+     return self.cursor.execute(sql)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+     return self.cursor.execute(query, args)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/cursors.py", line 206, in execute
+     res = self._query(query)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/cursors.py", line 319, in _query
+     db.query(q)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/connections.py", line 254, in query
+     _mysql.connection.query(self, query)
+ MySQLdb.OperationalError: (1290, 'The MySQL server is running with the --read-only option so it cannot execute this statement')
+ 
+ The above exception was the direct cause of the following exception:
+ 
+ Traceback (most recent call last):
+   File "/usr/local/lib/python3.9/site-packages/django/db/migrations/recorder.py", line 68, in ensure_schema
+     editor.create_model(self.Migration)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/base/schema.py", line 324, in create_model
+     self.execute(sql, params or None)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/base/schema.py", line 142, in execute
+     cursor.execute(sql, params)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+     return super().execute(sql, params)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+     return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+     return executor(sql, params, many, context)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+     return self.cursor.execute(sql, params)
+   File "/usr/local/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+     raise dj_exc_value.with_traceback(traceback) from exc_value
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 82, in _execute
+     return self.cursor.execute(sql)
+   File "/usr/local/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+     return self.cursor.execute(query, args)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/cursors.py", line 206, in execute
+     res = self._query(query)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/cursors.py", line 319, in _query
+     db.query(q)
+   File "/usr/local/lib/python3.9/site-packages/MySQLdb/connections.py", line 254, in query
+     _mysql.connection.query(self, query)
+ django.db.utils.OperationalError: (1290, 'The MySQL server is running with the --read-only option so it cannot execute this statement')
+ 
+ During handling of the above exception, another exception occurred:
