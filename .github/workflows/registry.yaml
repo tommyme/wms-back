@@ -29,4 +29,4 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/you-bowen/wms-back:v1
+            ghcr.io/you-bowen/wms-back:v1.1
